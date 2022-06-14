@@ -1,16 +1,68 @@
 <!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
-<html>
+<html xmlns:th="http://www.thymeleaf.org" 
+xmlns="http://www.w3.org/1999/xhtml">
     <head>
-        <title>TODO supply a title</title>
+        <title>Hidrograma Unitario 3000</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"/>
+        <link href="../static/css/main.css"/>
     </head>
     <body>
-        <div>TODO write content</div>
+        <div class="h1 text-center text-capitalize">Calcular hidrograma unitario</div>
+        <!--========Solicitar datos========-->
+        
+        <div class="container">
+            <div class="text-center">
+                <!--======== FORMULARIO GUIA ========-->
+                <form action="saveData" method="POST">
+                    <div class="card col-12 bg-light">
+                        <legend class="text-center text-muted">Ingresar Datos</legend>
+                        <div class="card-body">
+                        <!--======== DATOS ========-->
+                            <!--==Area de cuenca==-->
+
+                            <!--== Factor k ==-->
+                            <!--== Factor n ==-->
+                            <!--== Hietograma de Precipitacion ==-->
+                                <!--== Cantidad de intervalos de precipitacion ==-->
+                                <!--== Intervalo horario del hietograma ==-->
+                                <!--== alturas de precipitacion en mm para cada intervalo ==-->
+                            <!--== Hidrograma observado a la salida ==-->
+                                <!--== Intervalo horario del hidrograma(mismo del hieto) ==-->
+                                <!--== Caudales asociados a dichos intervalos en m^3/s ==-->
+                            
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+
+        
+        <!--========En caso de que no se transfieran datos, probar con GET========-->
+        <!--========
+            Area de cuenca
+            Factor k
+            Factor n
+            Hietograma de precipitacion:
+                Numero de intervalos de precipitacion
+                Intervalo horario del hietograma(opciones 6 - 12 - 18 - 24)
+                alturas de precipitacion en mm para cada intervalo
+            Hidrograma observado a la salida:
+                Intervalo horario del hidrograma(debe coincidir con el del hieto)
+                Caudales asociados a dichos intervalos en m^3/s
+            -------------------------------------------
+            Nombre de cuenca(Obligatorio)
+            provincia(opcional)
+            departamento(opcional)
+            Conecta aguas arribas con(nombre de cuenca)
+            Conecta aguas abajo con(nombre de cuenca)
+            ========-->
+
+        <!-- JS BOOTSTRAP -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+
     </body>
 </html>
