@@ -8,3 +8,6 @@ and open the template in the editor.
     Author     : Beatr
 */
 
+body {
+    height: 100vh;
+}

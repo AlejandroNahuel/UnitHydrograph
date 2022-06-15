@@ -13,25 +13,118 @@ xmlns="http://www.w3.org/1999/xhtml">
         <!--========Solicitar datos========-->
         
         <div class="container">
-            <div class="text-center">
+            <div class="text-center mt-2">
                 <!--======== FORMULARIO GUIA ========-->
-                <form action="saveData" method="POST">
-                    <div class="card col-12 bg-light">
-                        <legend class="text-center text-muted">Ingresar Datos</legend>
-                        <div class="card-body">
-                        <!--======== DATOS ========-->
+                <form class="col-12" action="saveData" method="POST">
+                    <div class="col-12 card bg-light">
+                        <legend class="card-header text-center text-muted">Ingresar Datos</legend>
+                        <div class="card-body bg-light">
+                        <!--======== DATOS PARA CALCULO DE HU========-->
                             <!--==Area de cuenca==-->
-
-                            <!--== Factor k ==-->
-                            <!--== Factor n ==-->
-                            <!--== Hietograma de Precipitacion ==-->
-                                <!--== Cantidad de intervalos de precipitacion ==-->
-                                <!--== Intervalo horario del hietograma ==-->
-                                <!--== alturas de precipitacion en mm para cada intervalo ==-->
-                            <!--== Hidrograma observado a la salida ==-->
-                                <!--== Intervalo horario del hidrograma(mismo del hieto) ==-->
-                                <!--== Caudales asociados a dichos intervalos en m^3/s ==-->
+                            <div class="row row-cols-2">
+                                <div class="form-group">
+                                    <div class="col-12">
+                                        <label class="col-12">Area en km^2</label>
+                                        <input class="form-control" id="" name="" type="" placeholder="Area km^2" required/>
+                                    </div>
+                                </div>
+                                <!--== Factor k ==-->
+                                <div class="form-group">
+                                    <div class="col-12">
+                                        <label class="col-12">Factor k</label>
+                                        <input class="form-control" id="" name="" type="" placeholder="Factor k" required/>
+                                    </div>
+                                </div>
+                                
+                                <!--== Factor n ==-->
+                                <div class="form-group">
+                                    <div class="col-12">
+                                        <label class="col-12">Factor n</label>
+                                        <input class="form-control" id="" name="" type="" placeholder="Factor n" required/>
+                                    </div>
+                                </div>
+                                <!--== Hietograma de Precipitacion ==-->
+                                    <!--== Cantidad de intervalos de precipitacion ==-->
+                                    <div class="form-group">
+                                        <div class="col-12">
+                                            <label class="col-12">Numero de intervalos</label>
+                                            <input class="form-control" id="" name="" type="" placeholder="Cantidad de intervalos (opcional)"/>
+                                        </div>
+                                    </div>
+                                    <!--== Intervalo horario del hietograma ==-->
+                                    <div class="form-group">
+                                        <div class="col-12">
+                                            <label class="col-12">Intervalo horario</label>
+                                            <input class="form-control" id="" name="" type="" placeholder="Intervalo horario(6 , 12 , 18 , 24" required/>
+                                        </div>
+                                    </div>
+                                    <!--== alturas de precipitacion en mm para cada intervalo ==-->
+                                    <div class="form-group">
+                                        <div class="col-12">
+                                            <label class="col-12">Alturas de precipitacion en mm</label>
+                                            <input class="form-control" id="" name="" type="" placeholder="Alturas de precipitacion en mm" required/>
+                                        </div>
+                                    </div>
+                                <!--== Hidrograma observado a la salida ==-->
+                                    <!--== Intervalo horario del hidrograma(mismo del hieto) ==-->
+                                    <div class="form-group">
+                                        <div class="col-12">
+                                            <label class="col-12">Intervalo horario de hidrograma</label>
+                                            <input class="form-control" id="" name="" type="" placeholder="mismo intervalo horario del hietograma" required/>
+                                        </div>
+                                    </div>
+                                    <!--== Caudales asociados a dichos intervalos en m^3/s ==-->
+                                    <div class="form-group">
+                                        <div class="col-12">
+                                            <label class="col-12">Caudales de dichos intervalos en m^3/s</label>
+                                            <input class="form-control" id="" name="" type="" placeholder="caudales asociados a intervalos m^3/s" required/>
+                                        </div>
+                                    </div>
+                            </div>
                             
+                        <!--==-- Datos de ubicacion--==-->
+                            <!--==Nombre de la cuenca (obligatorio)==-->
+                            <div class="row row-cols-2">
+                                <div class="form-group">
+                                    <div class="col-12">
+                                        <label class="col-12">Nombre de la cuenca</label>
+                                        <input class="form-control" id="" name="" type="" placeholder="Nombre de cuenca" required/>
+                                    </div>
+                                </div>
+                                <!--==provincia (opcional)==-->
+                                <div class="form-group">
+                                    <div class="col-12">
+                                        <label class="col-12">Provincia</label>
+                                        <input class="form-control" id="" name="" type="" placeholder="Provincia (opcional)" />
+                                    </div>
+                                </div>
+                                <!--==departamento (opcional)==-->
+                                <div class="form-group">
+                                    <div class="col-12">
+                                        <label class="col-12">Departamento</label>
+                                        <input class="form-control" id="" name="" type="" placeholder="Departamento (opcional)" />
+                                    </div>
+                                </div>
+                                <!--==conecta aguas arribas con (opcional)==-->
+                                <div class="form-group">
+                                    <div class="col-12">
+                                        <label class="col-12">Conecta aguas arriba con</label>
+                                        <input class="form-control" id="" name="" type="" placeholder="Conecta aguas arriba con...(opcional)" />
+                                    </div>
+                                </div>
+                                <!--==conecta aguas abajo con (opcional)==-->
+                                <div class="form-group">
+                                    <div class="col-12">
+                                        <label class="col-12">Conecta aguas abajo con</label>
+                                        <input class="form-control" id="" name="" type="" placeholder="Conecta aguas abajo con...(opcional)" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-12 mt-2 text-center">
+                                    <button type="submit" class="btn btn-primary btn-lg">Enviar</button>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </form>
