@@ -18,7 +18,7 @@ public class Hietogram {
         for(int i=0 ; i<precipitationHeight.length; i++){
             accumulator += precipitationHeight[i];
         }
-        this.totalVolumePrecipitated = 1/1000;
+        this.totalVolumePrecipitated = 1/1000 * accumulator * basin.getArea();
         
         return totalVolumePrecipitated;
     }
