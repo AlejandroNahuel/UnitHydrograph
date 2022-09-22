@@ -24,15 +24,16 @@ xmlns="http://www.w3.org/1999/xhtml">
                             <div class="row row-cols-2">
                                 <div class="form-group">
                                     <div class="col-12">
-                                        <label class="col-12">Area en km^2</label>
-                                        <input class="form-control" id="" name="" type="" placeholder="Area km^2" required="true"/>
+                                        <label class="col-12" for="area">Area en km^2</label>
+                                        <input class="form-control" id="area" name="area" type="number" placeholder="Area km^2" required="true"/>
+                                        <div class="text-danger visually-hidden" id="validacion-area">Completa este campo</div>
                                     </div>
                                 </div>
                                 <!--== Factor k ==-->
                                 <div class="form-group">
                                     <div class="col-12">
                                         <label class="col-12">Factor k</label>
-                                        <input class="form-control" id="" name="" type="" placeholder="Factor k" required="true"/>
+                                        <input class="form-control" id="factor-k" name="" type="number" placeholder="Factor k" required="true"/>
                                     </div>
                                 </div>
                                 
@@ -40,7 +41,7 @@ xmlns="http://www.w3.org/1999/xhtml">
                                 <div class="form-group">
                                     <div class="col-12">
                                         <label class="col-12">Factor n</label>
-                                        <input class="form-control" id="" name="" type="" placeholder="Factor n" required="true"/>
+                                        <input class="form-control" id="factor-n" name="" type="number" placeholder="Factor n" required="true"/>
                                     </div>
                                 </div>
                                 <!--== Hietograma de Precipitacion ==-->
@@ -48,85 +49,84 @@ xmlns="http://www.w3.org/1999/xhtml">
                                     <div class="form-group">
                                         <div class="col-12">
                                             <label class="col-12">Numero de intervalos</label>
-                                            <input class="form-control" id="" name="" type="" placeholder="Cantidad de intervalos (opcional)"/>
+                                            <input class="form-control" id="intervalos-precip" name="" type="" placeholder="Cantidad de intervalos (opcional)"/>
                                         </div>
                                     </div>
                                     <!--== Intervalo horario del hietograma ==-->
                                     <div class="form-group">
                                         <div class="col-12">
-                                            <label class="col-12">Intervalo horario</label>
-                                            <input class="form-control" id="" name="" type="" placeholder="Intervalo horario(6 , 12 , 18 , 24" required="true"/>
+                                            <label class="col-12">Intervalo horario [hs]</label>
+                                            <input class="form-control" id="intervalo-h" name="" type="number" placeholder="Intervalo horario(6 , 12 , 18 , 24)" required="true"/>
                                         </div>
                                     </div>
                                     <!--== alturas de precipitacion en mm para cada intervalo ==-->
-                                    <div class="form-group">
+                                    <!--<div class="form-group">
                                         <div class="col-12">
                                             <label class="col-12">Alturas de precipitacion en mm</label>
-                                            <input class="form-control" id="" name="" type="" placeholder="Alturas de precipitacion en mm" required="true"/>
+                                            <input class="form-control" id="" name="" type="number" placeholder="Alturas de precipitacion en mm" required="true"/>
                                         </div>
-                                    </div>
+                                    </div>-->
                                 <!--== Hidrograma observado a la salida ==-->
                                     <!--== Intervalo horario del hidrograma(mismo del hieto) ==-->
-                                    <div class="form-group">
+                                    <!--<div class="form-group">
                                         <div class="col-12">
                                             <label class="col-12">Intervalo horario de hidrograma</label>
-                                            <input class="form-control" id="" name="" type="" placeholder="mismo intervalo horario del hietograma" required="true"/>
+                                            <input class="form-control" id="" name="" type="number" placeholder="mismo intervalo horario del hietograma" required="true"/>
                                         </div>
-                                    </div>
+                                    </div>-->
                                     <!--== Caudales asociados a dichos intervalos en m^3/s ==-->
-                                    <div class="form-group">
+                                    <!--<div class="form-group">
                                         <div class="col-12">
                                             <label class="col-12">Caudales de dichos intervalos en m^3/s</label>
-                                            <input class="form-control" id="" name="" type="" placeholder="caudales asociados a intervalos m^3/s" required="true"/>
+                                            <input class="form-control" id="" name="" type="number" step="0.1" placeholder="caudales asociados a intervalos m^3/s" required="true"/>
                                         </div>
-                                    </div>
+                                    </div>-->
                             </div>
                             
-                        <!--==-- Datos de ubicacion--==-->
-                            <!--==Nombre de la cuenca (obligatorio)==-->
-                            <div class="row row-cols-2">
+                        <!-- COMENTARIODatos de ubicacion
+                                COMENTARIO Nombre de la cuenca (obligatorio)
+                                <div class="row row-cols-2">
                                 <div class="form-group">
                                     <div class="col-12">
                                         <label class="col-12">Nombre de la cuenca</label>
                                         <input class="form-control" id="" name="" type="" placeholder="Nombre de cuenca" required/>
                                     </div>
                                 </div>
-                                <!--==provincia (opcional)==-->
+                                COMENTARIO provincia (opcional
                                 <div class="form-group">
                                     <div class="col-12">
                                         <label class="col-12">Provincia</label>
                                         <input class="form-control" id="" name="" type="" placeholder="Provincia (opcional)" />
                                     </div>
                                 </div>
-                                <!--==departamento (opcional)==-->
+                                COMENTARIO departamento (opcional)
                                 <div class="form-group">
                                     <div class="col-12">
                                         <label class="col-12">Departamento</label>
                                         <input class="form-control" id="" name="" type="" placeholder="Departamento (opcional)" />
                                     </div>
                                 </div>
-                                <!--==conecta aguas arribas con (opcional)==-->
+                                COMENTARIO conecta aguas arribas con (opcional
                                 <div class="form-group">
                                     <div class="col-12">
                                         <label class="col-12">Conecta aguas arriba con</label>
                                         <input class="form-control" id="" name="" type="" placeholder="Conecta aguas arriba con...(opcional)" />
                                     </div>
                                 </div>
-                                <!--==conecta aguas abajo con (opcional)==-->
+                                COMENTARIO conecta aguas abajo con (opcional)
                                 <div class="form-group">
                                     <div class="col-12">
                                         <label class="col-12">Conecta aguas abajo con</label>
                                         <input class="form-control" id="" name="" type="" placeholder="Conecta aguas abajo con...(opcional)" />
                                     </div>
-                                </div>
+                                </div>-->
                             </div>
                             <div class="form-group">
                                 <div class="col-12 mt-2 text-center">
-                                    <button type="submit" class="btn btn-primary btn-lg">Enviar</button>
+                                    <button type="submit" class="btn btn-primary btn-lg mb-2" id="btn-continue">Enviar</button>
                                 </div>
                             </div>
                         </div>
-                    </div>
                 </form>
             </div>
         </div>
@@ -155,7 +155,8 @@ xmlns="http://www.w3.org/1999/xhtml">
 
         <!-- JS BOOTSTRAP -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-
+        <!-- JS MAIN -->
+        <script th:src="@{js/main.js}"></script>
 
     </body>
 </html>
